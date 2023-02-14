@@ -21,6 +21,7 @@ The following visualization shows the amount of correlation in survival months i
 ![image](https://user-images.githubusercontent.com/89415428/218744082-1545852d-cb58-447f-908a-3588f575172d.png)
 
 
+
 The following visualization shows the amount of correlation in survival months in patients who were alive and free from cancer. In this case, there is no significant factor which determines a possible correlation between age and survival months for patients who are alive. In general there is a broad consensus of the cancer treatments taking from around 45 months to 95 months of treatment
 
 ![image](https://user-images.githubusercontent.com/89415428/218744120-975feaf2-f237-40a7-89fa-fbbb6ff6e90d.png)
@@ -30,6 +31,8 @@ The following visualization shows the amount of correlation in survival months i
 In this analysis, the patients were sampled using a distribution. 1 would represent live patients, and 0 would represent dead patients. 500 samples with each sample being size 50 was used with replacement. In this case, the mean is somewhere between 0.15 and 0.20. The average death rate would be somewhere in this area. 
 
 ![image](https://user-images.githubusercontent.com/89415428/218744190-9437f02d-4a9d-4c0e-ad1f-7d1322584148.png)
+
+In general, under certain conditions, we must be very careful about providing the rate or probability that any patient can die. Because the data set is not a time series and was collected only in the year 2017, we cannot make the assumption that this rate is all true for all years. Because we are measuring the rate of death over a period of time, it is recommended to use a Poisson Distribution. Poisson Distributions typically are used for measuring rates in a single unit of time, especially for events which are rare. Depending on the size of risk for breast cancer, Poisson can be used. 
 
 
 
