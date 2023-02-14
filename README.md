@@ -17,14 +17,19 @@ The final visualization being used is a slightly skewed Normal histogram which s
 What this data exploratory analysis does answer is whether or not treatment in terms of survival months is effective for breast cancer patients. In terms of alive status, survival months matter after a certain minimum time period. For dead patients, the number of survival months is more variable. The analysis also includes the general risk factor for a patient dying from breast cancer. With regards to tumor size, breast cancer deaths do not result from large tumors, but rather smaller ones. 
 
 The following visualization shows the amount of correlation in survival months in patients who were dead. In this case, there is no significant factor which determines a possible correlation between age and survival months for patients who are alive.
-![image](https://user-images.githubusercontent.com/89415428/218743235-d02fd58c-ad16-42c0-931f-c39bc2456583.png)
 
-![image](https://user-images.githubusercontent.com/89415428/218742591-891dd0df-df1c-4a34-a6a0-701ac2371700.png)
+![image](https://user-images.githubusercontent.com/89415428/218744082-1545852d-cb58-447f-908a-3588f575172d.png)
 
 
 The following visualization shows the amount of correlation in survival months in patients who were alive and free from cancer. In this case, there is no significant factor which determines a possible correlation between age and survival months for patients who are alive. In general there is a broad consensus of the cancer treatments taking from around 45 months to 95 months of treatment
 
-<img width="435" alt="30f28e1a-6969-430a-84fe-3283ee438098" src="https://user-images.githubusercontent.com/89415428/218743377-351a5e70-f7de-4405-ac82-1cf1217fc445.png">
+![image](https://user-images.githubusercontent.com/89415428/218744120-975feaf2-f237-40a7-89fa-fbbb6ff6e90d.png)
 
 
-In this analysis, the patients were sampled using a distribution. 1 would represent live patients, and 0 would represent dead patients. 500 samples with each sample being size 50 was used without repl
+
+In this analysis, the patients were sampled using a distribution. 1 would represent live patients, and 0 would represent dead patients. 500 samples with each sample being size 50 was used with replacement. In this case, the mean is somewhere between 0.15 and 0.20. The average death rate would be somewhere in thsi area. 
+
+![image](https://user-images.githubusercontent.com/89415428/218744190-9437f02d-4a9d-4c0e-ad1f-7d1322584148.png)
+
+
+
