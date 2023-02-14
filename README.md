@@ -34,7 +34,7 @@ In this analysis, the patients were sampled using a distribution. 1 would repres
 
 In general, under certain conditions, we must be very careful about providing the rate or probability that any patient can die. Because the data set is not a time series and was collected only in the year 2017, we cannot make the assumption that this rate is all true for all years. Because we are measuring the rate of death over a period of time, it is recommended to use a Poisson Distribution. Poisson Distributions typically are used for measuring rates in a single unit of time, especially for events which are rare. Depending on the size of risk for breast cancer, Poisson can be used. 
 
-The final image shows the races of people who have died from the cancer. Top image is for dead patients, and lower one is for alive patients. While white people seem to have a much higher risk of deaths, this could be due to a skewed pick from the population. 
+The final image shows the races of people who have died from the cancer. Top image is for dead patients, and lower one is for alive patients. While white people seem to have a much higher risk of deaths, this could be due to a skewed pick from the population. The othe races can include Asian or other unknown race.
 ![image](https://user-images.githubusercontent.com/89415428/218746475-0428013d-3b4f-44bb-8426-3dcf466c6eee.png)
 ![image](https://user-images.githubusercontent.com/89415428/218746630-fb45d502-1958-43e4-b954-684148c4c477.png)
 
