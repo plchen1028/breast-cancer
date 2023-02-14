@@ -17,10 +17,14 @@ The final visualization being used is a slightly skewed Normal histogram which s
 What this data exploratory analysis does answer is whether or not treatment in terms of survival months is effective for breast cancer patients. In terms of alive status, survival months matter after a certain minimum time period. For dead patients, the number of survival months is more variable. The analysis also includes the general risk factor for a patient dying from breast cancer. With regards to tumor size, breast cancer deaths do not result from large tumors, but rather smaller ones. 
 
 The following visualization shows the amount of correlation in survival months in patients who were dead. In this case, there is no significant factor which determines a possible correlation between age and survival months for patients who are alive.
+![image](https://user-images.githubusercontent.com/89415428/218743235-d02fd58c-ad16-42c0-931f-c39bc2456583.png)
 
-<img width="403" alt="8d0f2ea9-e4ef-4b7e-8373-b7bba223dbb8" src="https://user-images.githubusercontent.com/89415428/218739314-c730fe9c-960f-48b6-b128-e479e1b8163f.png">
+![image](https://user-images.githubusercontent.com/89415428/218742591-891dd0df-df1c-4a34-a6a0-701ac2371700.png)
 
 
-The following visualization shows the amount of correlation in survival months in patients who were alive and free from cancer. In this case, there is no significant factor which determines a possible correlation between age and survival months for patients who are alive. In general there is a broad consensus of the cancer treatments taking from around 45 months to 95 months of treatment. 
+The following visualization shows the amount of correlation in survival months in patients who were alive and free from cancer. In this case, there is no significant factor which determines a possible correlation between age and survival months for patients who are alive. In general there is a broad consensus of the cancer treatments taking from around 45 months to 95 months of treatment
 
-<img width="403" alt="f19df45a-3f87-41cf-8002-ce166e1f7525" src="https://user-images.githubusercontent.com/89415428/218739690-d66e5cf1-d5d0-459d-8898-de391eda9a98.png">
+<img width="435" alt="30f28e1a-6969-430a-84fe-3283ee438098" src="https://user-images.githubusercontent.com/89415428/218743377-351a5e70-f7de-4405-ac82-1cf1217fc445.png">
+
+
+In this analysis, the patients were sampled using a distribution. 1 would represent live patients, and 0 would represent dead patients. 500 samples with each sample being size 50 was used without repl
