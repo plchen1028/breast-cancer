@@ -27,7 +27,7 @@ The following visualization shows the amount of correlation in survival months i
 
 
 
-In this analysis, the patients were sampled using a distribution. 1 would represent live patients, and 0 would represent dead patients. 500 samples with each sample being size 50 was used with replacement. In this case, the mean is somewhere between 0.15 and 0.20. The average death rate would be somewhere in thsi area. 
+In this analysis, the patients were sampled using a distribution. 1 would represent live patients, and 0 would represent dead patients. 500 samples with each sample being size 50 was used with replacement. In this case, the mean is somewhere between 0.15 and 0.20. The average death rate would be somewhere in this area. 
 
 ![image](https://user-images.githubusercontent.com/89415428/218744190-9437f02d-4a9d-4c0e-ad1f-7d1322584148.png)
 
