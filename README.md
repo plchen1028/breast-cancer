@@ -39,4 +39,11 @@ The final image shows the races of people who have died from the cancer. Top ima
 ![image](https://user-images.githubusercontent.com/89415428/218746630-fb45d502-1958-43e4-b954-684148c4c477.png)
 
 
+# Linear Regression Model
 
+Here is the linear regression model for predicting the survival months of dead patients based on age, tumor size, n stage, and t stage cancer. What the model does 
+not account is actually the race. What we can infer from the model is that the line is in general accurate. This model can be used to predict the status of a 
+patient based on the stages of cancer, the size of tumor, and the age. 
+
+
+<img width="434" alt="Prediction_Plot" src="https://user-images.githubusercontent.com/89415428/221869889-878eadca-d2f0-4019-b141-1e4352c2aff6.png">
