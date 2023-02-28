@@ -1,3 +1,28 @@
+# Second Prototype of Breast Cancer Research Project
+Link to Data Science Website: https://sites.google.com/view/pchenportfolio/home
+
+The goal of this project is to showcase the factors involved with a higher risk of breast cancer and dying from it. Predictions and analysis of this 
+situation can be applied to the medical field. 
+
+The dataset being included in this project includes more than 4,000 patients with their breast cancer demographics. Categories include different stages of cancer,
+race, alive or death status, tumnor size, survival months during treatment, and marital status. The following example visualization shown below is the 
+general proportion of patients who have died from breast cancer compared to the ones who have survived from it. It provides a general guideline on
+the overal scope of this project. More visualizations on race, survival months, with histograms being provided, are also presented. 
+
+<img width="403" alt="Alive-Dead" src="https://user-images.githubusercontent.com/89415428/217355611-de0c4f6d-b79f-4e78-b209-d3f39390542f.png">
+
+
+Two methods of analysis are being presented in the project. The first method involves setting up a prediction model based on stages of cancer, the size of tumor, and the age of the patient. This is done to ensure the accuracy of the model and how well it performs under real world usage and conditions. THe second method includes
+using a prediction model to calculate the probability of which race has a higher risk of dying from cancer. The first method is in general more preferred because it accounts for a lot of the independent variables which makes it an accurate model for determining which independent variable is likely to play a role in cancer death. 
+By generating a summary table, we can see which coefficients or variables have an influence in the patient's mortality. 
+
+<img width="326" alt="Model Coefficients" src="https://user-images.githubusercontent.com/89415428/221886258-7d1f9b17-008f-4217-ac7d-2eec243fc5e2.png">
+
+
+The results from this analysis show that despite a disproportionate amount of races in the data exploratory analysis, there is no correlation which shows which race has a higher chance of dying from breast cancer (according to the prediction model). According to the summary table, T4 and N3 are the leading factors which will not make a patient alive. 
+
+
+
 # Exploratory Data Analysis
 The following variables used in this dataset include dead or alive status, survival months, and tumor size as the variables being used for the data analysis. A few statistics and visualizations will be used to portray the number of patients who are alive or dead, the number of survival months while on treatment, and whether or not tumor size affects the patient mortality rate. The data was collected from kaggle and was reported to be from the year 2017.
 
@@ -43,7 +68,10 @@ The final image shows the races of people who have died from the cancer. Top ima
 
 Here is the linear regression model for predicting the survival months of dead patients based on age, tumor size, n stage, and t stage cancer. What the model does 
 not account is actually the race. What we can infer from the model is that the line is in general accurate. This model can be used to predict the status of a 
-patient based on the stages of cancer, the size of tumor, and the age. 
+patient based on the stages of cancer, the size of tumor, and the age. The summary table is also generated. 
+
+<img width="326" alt="Model Coefficients" src="https://user-images.githubusercontent.com/89415428/221886211-4e21f440-752d-4cc4-8a9a-6cf043809c06.png">
+
 
 
 <img width="434" alt="Prediction_Plot" src="https://user-images.githubusercontent.com/89415428/221869889-878eadca-d2f0-4019-b141-1e4352c2aff6.png">
@@ -51,4 +79,5 @@ patient based on the stages of cancer, the size of tumor, and the age.
 Here is the prediction model that predicts the probablity of death given only face factors. 
 
 <img width="434" alt="Probability of Death by Race" src="https://user-images.githubusercontent.com/89415428/221879495-d0f01442-b11d-47f5-8cf1-0d32f2b36e04.png">
+
 
