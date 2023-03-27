@@ -65,14 +65,17 @@ hist(sample_means, main = "Sampling Distribution of Dead and Alive Patients",
 
 ggplot(data = alive) +
   geom_bar(mapping = aes(x = Race))
-
+# This is the code for converting the alive or death status of 
+# patients to binary values for prediction.
 breast_cancer$status <- ifelse(breast_cancer$Status == "Alive", 1, 0)
 
+# The model is created based on age, 
+# tumor size, stages of cancer, and is based on binomial prediction.
 model <- glm(status ~ Age + Tumor.Size + T.Stage + N.Stage, data = breast_cancer, family = binomial)
 summary(model)
 
 breast_cancer$predicted_status <- predict(model, type = "response")
-
+# Here is the overall plot of the prediction model. 
 library(ggplot2)
 ggplot(breast_cancer, aes(x = predicted_status, y = status)) +
   geom_point() +
@@ -80,9 +83,12 @@ ggplot(breast_cancer, aes(x = predicted_status, y = status)) +
   xlab("Predicted probability of death") +
   ylab("Observed status (0 = alive, 1 = dead)") +
   ggtitle("Logistic regression model predictions")
-
+# The summary of the model shows which variables have a higher influence
+# of predicting the likelihood of patients dying from cancer.
 summary(model)
 
+# Here is rhe prediction model used to determine 
+# if race actually is a significant variable in patient deaths.
 
 logistic_model <- glm(Status ~ Race, data = breast_cancer, family = "binomial")
 summary(logistic_model)
