@@ -125,8 +125,7 @@ ggplot(data = alive) +
   geom_point(mapping = aes(x = Age, y = Survival.Months))
 
 
-# Here is the code for calculating the average rate from
-# dead and alive patients. 
+Here is the code for calculating the average rate from dead and alive patients. 
 
 patients <- c(rep(0, 3408), rep(1, 616))
 
