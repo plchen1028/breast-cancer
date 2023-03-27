@@ -90,9 +90,12 @@ library(dplyr)
 library(reader)
 
 The first question to ask is the proportion of cancer patients who have survived vs the number being dead. This should give an overall estimate of the general survivalbility of cancer rates. A bar graph is depicted showing the number of patients who are alive or dead. 
+
+```
 glimpse(breast_cancer)
 ggplot(data = breast_cancer) +
   geom_bar(mapping = aes(x = Status))
+```
 
 This is the overall histogram of all patients with their survival months being included. 
 ggplot(data = breast_cancer) +
