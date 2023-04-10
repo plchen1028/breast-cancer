@@ -68,6 +68,8 @@ hist(sample_means, main = "Sampling Distribution of Dead and Alive Patients",
 ggplot(data = alive) +
   geom_bar(mapping = aes(x = Race))
 
+# Here is the glm model to predict the dead or alive status of patients based on a few factors. 
+
 breast_cancer$Status <- ifelse(breast_cancer$Status == "Alive", 1, 0)
 
 model <- glm(Status ~ Race + Age + Tumor.Size + T.Stage + N.Stage, data = breast_cancer, family = binomial)
@@ -75,6 +77,7 @@ summary(model)
 
 breast_cancer$predicted_status <- plogis(predict(model, type = "response"))
 
+# Here is the graph. 
 
 library(ggplot2)
 ggplot(breast_cancer, aes(x = predicted_status, y = Status)) +
@@ -86,7 +89,7 @@ ggplot(breast_cancer, aes(x = predicted_status, y = Status)) +
 
 summary(model)
 
-
+# Here is the prediction model for only race. 
 logistic_model <- glm(Status ~ Race, data = breast_cancer, family = "binomial")
 summary(logistic_model)
 
