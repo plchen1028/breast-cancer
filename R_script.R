@@ -1,10 +1,12 @@
 # Patrick L. Chen
 # CDS 492 Project
-setwd("C:/Users/Patrick/Desktop/CDS492/Breast Cancer Dataset")
+setwd("C:/Users/Patrick/OneDrive/CDS492/Breast Cancer Dataset")
 breast_cancer <- read.csv("Breast_Cancer.csv")
+
 library(tidyverse)
 library(dplyr)
 library(reader)
+library(caret)
 
 # The first question to ask is the proportion of cancer patients 
 # who have survived vs the number being dead. This should give
@@ -65,30 +67,25 @@ hist(sample_means, main = "Sampling Distribution of Dead and Alive Patients",
 
 ggplot(data = alive) +
   geom_bar(mapping = aes(x = Race))
-# This is the code for converting the alive or death status of 
-# patients to binary values for prediction.
-breast_cancer$status <- ifelse(breast_cancer$Status == "Alive", 1, 0)
 
-# The model is created based on age, 
-# tumor size, stages of cancer, and is based on binomial prediction.
-model <- glm(status ~ Age + Tumor.Size + T.Stage + N.Stage, data = breast_cancer, family = binomial)
+breast_cancer$Status <- ifelse(breast_cancer$Status == "Alive", 1, 0)
+
+model <- glm(Status ~ Race + Age + Tumor.Size + T.Stage + N.Stage, data = breast_cancer, family = binomial)
 summary(model)
 
-breast_cancer$predicted_status <- predict(model, type = "response")
-# Here is the overall plot of the prediction model. 
+breast_cancer$predicted_status <- plogis(predict(model, type = "response"))
+
+
 library(ggplot2)
-ggplot(breast_cancer, aes(x = predicted_status, y = status)) +
+ggplot(breast_cancer, aes(x = predicted_status, y = Status)) +
   geom_point() +
   geom_smooth(method = "glm", method.args = list(family = "binomial"), se = FALSE) +
   xlab("Predicted probability of death") +
   ylab("Observed status (0 = alive, 1 = dead)") +
   ggtitle("Logistic regression model predictions")
-# The summary of the model shows which variables have a higher influence
-# of predicting the likelihood of patients dying from cancer.
+
 summary(model)
 
-# Here is rhe prediction model used to determine 
-# if race actually is a significant variable in patient deaths.
 
 logistic_model <- glm(Status ~ Race, data = breast_cancer, family = "binomial")
 summary(logistic_model)
@@ -100,4 +97,10 @@ race_probs <- tapply(probs, breast_cancer$Race, mean)
 barplot(race_probs, xlab = "Race", ylab = "Probability of Death",
         ylim = c(0,1), col = "blue", main = "Probability of Death by Race")
 
+# Here is the cross validation for the glm model. 
+breast_cancer$Status <- factor(breast_cancer$Status, levels = c(0, 1), labels = c("alive", "dead"))
+formula <- Status ~ Age + Race + Tumor.Size + T.Stage + N.Stage
+ctrl <- trainControl(method = "cv", number = 10)
+model <- train(formula, data = breast_cancer, method = "glm", family = "binomial", trControl = ctrl)
+print(model)
 
