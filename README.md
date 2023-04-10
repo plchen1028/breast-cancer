@@ -70,12 +70,14 @@ Here is the linear regression model for predicting the survival months of dead p
 not account is actually the race. What we can infer from the model is that the line is in general accurate. This model can be used to predict the status of a 
 patient based on the stages of cancer, the size of tumor, and the age. The summary table is also generated. 
 
-<img width="326" alt="Model Coefficients" src="https://user-images.githubusercontent.com/89415428/221886211-4e21f440-752d-4cc4-8a9a-6cf043809c06.png">
+
+<img width="446" alt="GLM plot" src="https://user-images.githubusercontent.com/89415428/230967398-e7edc357-865a-4cf8-b47c-aabaad10b2c0.png">
+
+<img width="389" alt="Model Coefficients" src="https://user-images.githubusercontent.com/89415428/230967500-40ee1363-6826-491a-8d2e-6e2468eb95d7.png">
 
 
 
-<img width="434" alt="Prediction_Plot" src="https://user-images.githubusercontent.com/89415428/221869889-878eadca-d2f0-4019-b141-1e4352c2aff6.png">
 
-Here is the prediction model that predicts the probablity of death given only face factors. 
+Here is the prediction model that predicts the probablity of death given only race factors. 
 
 <img width="434" alt="Probability of Death by Race" src="https://user-images.githubusercontent.com/89415428/221879495-d0f01442-b11d-47f5-8cf1-0d32f2b36e04.png">
