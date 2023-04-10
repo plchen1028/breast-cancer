@@ -16,8 +16,8 @@ Two methods of analysis are being presented in the project. The first method inv
 using a prediction model to calculate the probability of which race has a higher risk of dying from cancer. The first method is in general more preferred because it accounts for a lot of the independent variables which makes it an accurate model for determining which independent variable is likely to play a role in cancer death. 
 By generating a summary table, we can see which coefficients or variables have an influence in the patient's mortality. 
 
-<img width="326" alt="Model Coefficients" src="https://user-images.githubusercontent.com/89415428/221886258-7d1f9b17-008f-4217-ac7d-2eec243fc5e2.png">
 
+<img width="389" alt="Model Coefficients" src="https://user-images.githubusercontent.com/89415428/230967658-9702aa81-26a4-4044-8655-f6becfa1a867.png">
 
 The results from this analysis show that despite a disproportionate amount of races in the data exploratory analysis, there is no correlation which shows which race has a higher chance of dying from breast cancer (according to the prediction model). According to the summary table, T4 and N3 are the leading factors which will not make a patient alive. 
 
